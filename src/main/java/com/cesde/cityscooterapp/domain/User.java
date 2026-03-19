@@ -1,25 +1,27 @@
 package com.cesde.cityscooterapp.domain;
 
-public class Customer {
+public class User {
 
     private int id;
     private String name;
     private String lastName;
     private String email;
+    private String phone;
     private String password;
     private boolean status;
 
-    public Customer() {
+    public User() {
     }
 
 
-    public Customer(int id, String name, String lastName, String email, String password, boolean status) {
+    public User(int id, String name, String lastName,String phonr, String email, String password, boolean status) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.status = status;
+        this.phone = phone;
     }
 
     public int getId() {
@@ -70,15 +72,11 @@ public class Customer {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", status=" + status +
-                '}';
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
