@@ -27,6 +27,12 @@ public class DriverServiceImp implements DriverService{
 
     @Override
     public Optional<Driver> getDriverById(int id) {
-        return Optional.empty();
+
+        Driver driver = driverRepository.drivers.stream()
+                .filter(d->d.getId()==id)
+                .findFirst()
+                .orElse(null);
+
+        return Optional.ofNullable(driver);
     }
 }

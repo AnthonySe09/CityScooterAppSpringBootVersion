@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public class DriverRepository {
 
-    List<Driver> drivers = new ArrayList<>(
+    public List<Driver> drivers = new ArrayList<>(
 
             new ArrayList<>()
 
@@ -18,6 +18,13 @@ public class DriverRepository {
     public Driver save(Driver driver){
         drivers.add(driver);
         return driver;
+    }
+
+    public Driver findById(int id){
+        return drivers.stream()
+                .filter(driver -> driver.getId()==id)
+                .findFirst()
+                .orElse(null);
     }
 
 }

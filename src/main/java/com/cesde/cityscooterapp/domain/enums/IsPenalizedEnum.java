@@ -1,6 +1,6 @@
 package com.cesde.cityscooterapp.domain.enums;
 
-public enum isPenalizedEnum {
+public enum IsPenalizedEnum {
     Admin,
     Mechanic,
     Driver
